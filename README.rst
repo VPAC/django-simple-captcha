@@ -1,6 +1,8 @@
-******************
-About this project
-******************
+*********************
+Django Simple Captcha
+*********************
+
+.. image:: https://travis-ci.org/mbi/django-simple-captcha.png?branch=master
 
 Django Simple Captcha is an extremely simple, yet highly customizable Django application to add captcha images to any Django form.
 
@@ -19,8 +21,14 @@ Requirements
 ++++++++++++
 
 * Django 1.3+
-* A fairly recent version of the Python Imaging Library (PIL) compiled with FreeType support
+* A recent version of the Python Imaging Library (PIL 1.1.7 or Pillow 2.0+) compiled with FreeType support
 * Flite is required for text-to-speech (audio) output, but not mandatory
+
+Python 3 compatibility
+++++++++++++++++++++++
+
+The current development version supports Python3 via the `six <https://pypi.python.org/pypi/six>`_ compatibility layer.
+You will need to install `Pillow HEAD <https://github.com/python-imaging/Pillow>`_ because PIL doesn't support Python3 yet.
 
 
 Documentation

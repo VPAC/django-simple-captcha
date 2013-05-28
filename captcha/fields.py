@@ -6,7 +6,6 @@ from django.forms import ValidationError
 from django.forms.fields import CharField, MultiValueField
 from django.forms.widgets import TextInput, MultiWidget, HiddenInput
 from django.utils.translation import ugettext_lazy as _
-from django.conf import settings as django_settings
 
 
 class CaptchaTextInput(MultiWidget):
@@ -47,7 +46,7 @@ class CaptchaTextInput(MultiWidget):
 
         self.image_and_audio = '<img src="%s" alt="captcha" class="captcha" />' % reverse('captcha-image', kwargs=dict(key=key))
         if settings.CAPTCHA_FLITE_PATH:
-            self.image_and_audio = '<a href="%s" title="%s">%s</a>' % (reverse('captcha-audio', kwargs=dict(key=key)), unicode(_('Play CAPTCHA as audio file')), self.image_and_audio)
+            self.image_and_audio = '<a href="%s" title="%s">%s</a>' % (reverse('captcha-audio', kwargs=dict(key=key)), str(_('Play CAPTCHA as audio file')), self.image_and_audio)
         return super(CaptchaTextInput, self).render(name, value, attrs=attrs)
 
     # This probably needs some more love

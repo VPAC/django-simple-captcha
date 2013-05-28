@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
     name='django-simple-captcha',
-    version='0.3.6',
+    version='0.3.7',
     description='A very simple, yet powerful, Django captcha application',
     author='Marco Bonetti',
     author_email='mbonetti@gmail.com',
@@ -21,6 +21,10 @@ setup(
     ],
     include_package_data=True,
     zip_safe=False,
-    install_requires=['setuptools'],
-    requires=['PIL (>=1.1.6)']
+    install_requires=[
+        'setuptools',
+        'six >=1.2.0',
+        'Django >= 1.3',
+        'Pillow >=2.0.0'
+    ]
 )
