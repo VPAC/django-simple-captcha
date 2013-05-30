@@ -1,3 +1,9 @@
+django-simple-captcha (0.3.7-4) unstable; urgency=low
+
+  * Requires at least python 2.6.
+
+ -- Brian May <bam@debian.org>  Thu, 30 May 2013 13:52:57 +1000
+
 django-simple-captcha (0.3.7-3) unstable; urgency=low
 
   * Add depends on python-six.
